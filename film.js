@@ -25,7 +25,7 @@ const renderFilmCard = (filmInfo) => {
     `;
 };
 
-fetch(`http://www.omdbapi.com/?apikey=5ccaa56f&i=${filmID}`)
+fetch(`https://www.omdbapi.com/?apikey=5ccaa56f&i=${filmID}`)
   .then((response) => {
     if (response.ok) {
       return response.json();

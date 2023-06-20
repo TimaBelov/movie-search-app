@@ -40,7 +40,7 @@ const getFilm = () => {
     return;
   }
 
-  fetch(`http://www.omdbapi.com/?apikey=5ccaa56f&s=${inputNode.value}`)
+  fetch(`https://www.omdbapi.com/?apikey=5ccaa56f&s=${inputNode.value}`)
     .then((response) => {
       if (response.ok) {
         return response.json();
