@@ -34,8 +34,9 @@ const changeColorBtn = () => {
 };
 
 const getFilm = () => {
-  if (inputNode.value == "") {
+  if (inputNode.value == "" || !inputNode.value.replace(/\s/g, "").length) {
     statusNode.innerHTML = "Нельзя отправить пустой запрос!";
+    inputNode.value = "";
     return;
   }
 
