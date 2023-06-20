@@ -8,7 +8,6 @@ const BTN_FILM_FIND_COLOR_CLASS = "find__btn_find";
 let filmsArray;
 
 const addFilmsOnPage = () => {
-  //   localStorage("filmsStorage", filmsArray);
   html = "";
   filmsArray.forEach((item) => {
     html += `
@@ -50,6 +49,8 @@ const getFilm = () => {
     .then((response) => {
       if (response.Response === "True") {
         filmsArray = response.Search;
+        localStorage.setItem("films", JSON.stringify(filmsArray));
+        console.log(filmsArray);
         addFilmsOnPage();
         changeColorBtn();
       } else {
@@ -67,6 +68,7 @@ btnNode.addEventListener("click", getFilm);
 filmListNode.addEventListener("click", exportFilm);
 
 const init = () => {
+  filmsArray = JSON.parse(localStorage.getItem("films"));
   addFilmsOnPage();
 };
 init();
