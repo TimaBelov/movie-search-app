@@ -1,0 +1,45 @@
+@import url(film.css);
+@import url(reset.css);
+
+body {
+  font-family: "Inter", sans-serif;
+
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+button {
+  font-family: inherit;
+}
+
+.find__input {
+  width: 500px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+
+  padding: 10px;
+  padding-left: 15px;
+}
+
+.find__input::placeholder {
+  color: #979797;
+}
+
+.find__btn {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+
+  border: none;
+  color: #fff;
+
+  padding: 10px 70px;
+  background-color: #0094ff;
+  cursor: pointer;
+}
+
+.find__btn_find {
+  background-color: #000;
+}

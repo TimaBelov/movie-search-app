@@ -1,0 +1,56 @@
+.film_list{
+    margin-top: 48px;
+}
+
+.film_list__item {
+    width: 660px;
+  padding: 0 169px 0 33px;
+
+  display: flex;
+}
+
+.film_list__item:hover {
+  background-color: #d9d9d9;
+  border-radius: 35px;
+
+  cursor: pointer;
+}
+
+.film__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+
+  color: #000;
+
+  padding-top: 30px;
+  margin-bottom: 7px;
+}
+
+.film__year {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  color: #0094ff;
+
+  margin-bottom: 18px;
+}
+
+.film__type {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+
+  color: #000;
+
+  padding-bottom: 47px;
+}
+
+.film__img {
+  width: 100px;
+  height: 148px;
+
+  margin-top: 41px;
+  margin-right: 65px;
+  margin-bottom: 26px;
+}
