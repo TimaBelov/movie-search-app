@@ -8,17 +8,19 @@ const BTN_FILM_FIND_COLOR_CLASS = "find__btn_find";
 let filmsArray;
 
 const addFilmsOnPage = () => {
+  //   localStorage("filmsStorage", filmsArray);
   html = "";
   filmsArray.forEach((item) => {
     html += `
-    <div class="film_list__item">
-        <div class="col"><img class="film__img" src=${item.Poster}></div>
-        <div class="col">
-            <p class="film__title">${item.Title}</p>
-            <p class="film__year">${item.Year}</p>
-            <p class="film__type">${item.Type}</p>
-        </div>
-    </div>
+    <section class="film_list__item" id=${item.imdbID}>
+            <div class="col"><img class="film__img" src=${item.Poster}></div>
+            <div class="col">
+                <p class="film__title">${item.Title}</p>
+                <p class="film__year">${item.Year}</p>
+                <p class="film__type">${item.Type}</p>
+            </div>
+        </a>
+    </section>
     `;
   });
   filmListNode.innerHTML = html;
@@ -56,4 +58,15 @@ const getFilm = () => {
     });
 };
 
+const exportFilm = (event) => {
+  let target = event.target.closest("section");
+  window.location.href = `film.html?id=${target.id}`;
+};
+
 btnNode.addEventListener("click", getFilm);
+filmListNode.addEventListener("click", exportFilm);
+
+const init = () => {
+  addFilmsOnPage();
+};
+init();
